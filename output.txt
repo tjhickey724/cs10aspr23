@@ -1,0 +1,16 @@
+1: def number_lines(infilename,outfilename):
+2:     infile = open(infilename,'r')
+3:     lines = infile.readlines()
+4:     infile.close()
+5: 
+6:     outfile = open(outfilename,'w')
+7:     count=1
+8:     for line in lines:
+9:         linenumber = str(count)+": "
+10:         outfile.write(linenumber+line)
+11:         count += 1
+12:     outfile.close()
+13: 
+14: infile = input("What is the source file: ")
+15: outfile = input("What is the target file? ")
+16: number_lines(infile,outfile)
