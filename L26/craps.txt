@@ -1,0 +1,54 @@
+Steps to play the game:
+
+use a while loop to
+ask if they want to play again
+and keep going until they
+want to stop.
+
+Then we need to write
+play_one_game()
+
+roll 2 dice:
+and to get n 
+check if n is 7 or 11 
+  if it is you win
+check if it is 2,3,12
+  if it is you lose
+
+roll again until you
+get n (you win)
+or 7 or 11 (you lose)
+
+
+
+roll dice: 6 6 sum is 12
+you lose ...
+play again: yes
+
+roll dice: 6 7 = 11
+you win
+play again: yes
+
+roll dice: 4 6 = 10
+roll dice: 3 3 = 6
+roll dice: 6 5 = 11
+you lose!
+play again? yes
+
+
+
+roll dice: 4 2 = 6
+
+
+
+Craps game ...
+
+roll 2 dice: 4 3
+You win!!!
+
+roll 2 dice: 1 4
+3 7
+2 6
+1 6
+You lose!!
+
