@@ -5,3 +5,4 @@ TD*
 .ipynb*
 .numbers
 grading
+__pycache__
