@@ -6,7 +6,11 @@ def bubblesort(vals):
         for j in range(len(vals)-1):
             if vals[j]>vals[j+1]:
                 # swap them
-                (vals[j],vals[j+1])=(vals[j+1],vals[j])
+                #(vals[j],vals[j+1])=(vals[j+1],vals[j])
+                tmp = vals[j]
+                vals[j] = vals[j+1]
+                vals[j+1] = tmp
+                
 
 
 def BStest(n):
@@ -25,6 +29,9 @@ def BStimetest(n):
 
 
 if __name__=='__main__':
-    BStest(20)
+    #BStest(20)
     n = int(input("n: "))
-    print('time in seconds:',BStimetest(n))
+    while n>0:
+        print('time in seconds:',BStimetest(n))
+        n = int(input("n: "))
+    

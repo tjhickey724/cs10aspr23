@@ -26,15 +26,25 @@ def merge(vs,ws):
     return vals
 
 def mergesort(vals):
+    ''' sort vals by recursively sorting 2 halves then merging '''
+    n = len(vals)
+    if n<=1: # a list of size 0 or 1 is already sorted
+        return vals
+    mid = n//2
+    return( merge(mergesort(vals[:mid]),mergesort(vals[mid:])))
+
+
+def mergesort_v(vals):
+    ''' verbose version which shows steps more clearly '''
     n = len(vals)
     if n<=1:
         return vals
-    mid = n//2
+    mid = n//2  # split into two halfs, roughly equal
     vs = vals[:mid]
     ws = vals[mid:]
-    vs = mergesort(vs)
-    ws = mergesort(ws)
-    vals = merge(vs,ws)
+    vs = mergesort_v(vs) # sort those two halves, recursively
+    ws = mergesort_v(ws)
+    vals = merge(vs,ws) # merge the sorted lists in about n steps
     return vals
 
 def MStest(n):
@@ -55,7 +65,10 @@ def MStimetest(n):
 
 
 if __name__=='__main__':
-    MStest(4)
+    
     n = int(input("n: "))
-    print('time in seconds:',MStimetest(n))
+    while n>0:
+        print('time in seconds:',MStimetest(n))
+        n = int(input("n: "))
+
         
