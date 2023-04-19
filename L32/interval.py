@@ -3,9 +3,9 @@ Intervals using Python classes
 '''
 
 class Interval():
-    def __init__(self,lo,hi):
-        self.lo = lo
-        self.hi = hi
+    def __init__(self,a,b):
+        self.lo = a
+        self.hi = b
         
     def __str__(self):
         ''' converts the interval to a string '''

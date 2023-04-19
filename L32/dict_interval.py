@@ -12,6 +12,7 @@ def contains(t,x):
     ''' true if interval t contains the point x '''
     return t['lo'] <= x <= t['hi']
 
+
 y = make_interval(2,5)
 #  same as y = {'lo':2,'hi':5}
 
