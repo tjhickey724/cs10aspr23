@@ -3,10 +3,10 @@ from savings_account import *
 
 class Bank():
 
-    savings_interest=3.0
+    savings_interest=3.0  // class variable 
 
     def __init__(self):
-        self.accounts=[]
+        self.accounts=[]  // instance variables
         self.account_counter=0
     
     def print_accounts(self):
@@ -21,12 +21,10 @@ class Bank():
 
         if type=='checking':
             print('opening checking account')
-            deposit = int(input("initial deposit: "))
-            account=Checking_Account(nickname,deposit)
+            account=Checking_Account(nickname,0)
         elif type=="savings":
-            print('opening savings account')
-            deposit = int(input("initial deposit: "))   
-            account=Savings_Account(nickname,deposit,Bank.savings_interest)
+            print('opening savings account') 
+            account=Savings_Account(nickname,0,Bank.savings_interest)
         self.accounts.append(account)
         print('opened account',account)
         print('-'*40)

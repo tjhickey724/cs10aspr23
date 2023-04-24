@@ -11,15 +11,7 @@ class Checking_Account(Bank_Account):
         return f'[checking {self.name} balance:{self.balance}]'
 
     
-    def deposit(self,amount):
-        self.balance += amount
-    
-    def withdraw(self,amount):
-        self.balance -= amount 
-         
-    def get_balance(self):
-        return self.balance
-    
+   
     def adjust(self):
         ''' process monthly fee '''
         self.balance -= Checking_Account.fee
